@@ -7,17 +7,17 @@ It shows how system files are stored and how to access the VueTorrent directory.
 
 ---
 
-## 📂 Directory Structure
+## 📂 Skin Directory Structure
 
 My setup is located under:
 
-
-Example:
-
 ```bash
-cd /mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent
-ls -la
+Host: /mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent 
+Container: /systemfiles
 
+Write directory:
+eugeneb@n100:~$ cd /mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent
+eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$ ls -la
 total 36
 drwxrwxrwx 3 root root 4096 Oct 27  2024 .
 drwxrwxrwx 3 root root 4096 Oct 27  2024 ..
@@ -27,4 +27,4 @@ drwxrwxrwx 3 root root 4096 Oct 27  2024 ..
 -rwxrw-rw- 1 root root 4096 Mar  2  2025 ._version.txt
 drwxrwxrwx 4 root root 4096 Oct 21  2024 public
 -rwxrw-rw- 1 root root    6 Oct 21  2024 version.txt
-
+eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$ 
