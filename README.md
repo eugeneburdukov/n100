@@ -1,8 +1,8 @@
 # n100
 
-# MiniPC configuration basics
+# 📦 MiniPC configuration basics
 
-This project documents my setup of minipc
+This project documents basic setup
 
 ---
 
