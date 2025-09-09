@@ -4,30 +4,7 @@ This project documents basic setup
 
 ---
 
-## 📂 Skin Directory Structure
-
-My setup is located under:
-
-```bash
-Host: /mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent 
-Container: /systemfiles
-
-Write directory:
-eugeneb@n100:~$ cd /mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent
-eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$ ls -la
-total 36
-drwxrwxrwx 3 root root 4096 Oct 27  2024 .
-drwxrwxrwx 3 root root 4096 Oct 27  2024 ..
--rwxrw-rw- 1 root root 6148 Oct 27  2024 .DS_Store
--rwxrw-rw- 1 root root 4096 Mar  2  2025 ._.DS_Store
--rwxrw-rw- 1 root root 4096 Mar  2  2025 ._public
--rwxrw-rw- 1 root root 4096 Mar  2  2025 ._version.txt
-drwxrwxrwx 4 root root 4096 Oct 21  2024 public
--rwxrw-rw- 1 root root    6 Oct 21  2024 version.txt
-eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$
-```
-
-## 📂 Disk automount
+## 📂 Disk automount - startup
 
 ```bash
 Create a folder:
@@ -52,5 +29,28 @@ eugeneb@n100:/mnt/satamedialibrary$ cat /etc/fstab
 /dev/sda1   /mnt/satamedialibrary   ext4   defaults   0   2
 /dev/sdb1   /mnt/t9medialibrary   ext4   defaults   0   2
 /swap.img	none	swap	sw	0	0
+```
+
+## 📂 Skin Directory Structure for qBittorent/Vuetorrent
+
+My setup is located under:
+
+```bash
+Host: /mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent 
+Container: /systemfiles
+
+Write directory:
+eugeneb@n100:~$ cd /mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent
+eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$ ls -la
+total 36
+drwxrwxrwx 3 root root 4096 Oct 27  2024 .
+drwxrwxrwx 3 root root 4096 Oct 27  2024 ..
+-rwxrw-rw- 1 root root 6148 Oct 27  2024 .DS_Store
+-rwxrw-rw- 1 root root 4096 Mar  2  2025 ._.DS_Store
+-rwxrw-rw- 1 root root 4096 Mar  2  2025 ._public
+-rwxrw-rw- 1 root root 4096 Mar  2  2025 ._version.txt
+drwxrwxrwx 4 root root 4096 Oct 21  2024 public
+-rwxrw-rw- 1 root root    6 Oct 21  2024 version.txt
+eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$
 ```
 ---
