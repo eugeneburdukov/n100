@@ -31,7 +31,7 @@ eugeneb@n100:/mnt/satamedialibrary$ cat /etc/fstab
 /swap.img	none	swap	sw	0	0
 ```
 
-## 📂 Install Disk Usage analyzer for Ubuntu
+## 🔧 Install Disk Usage analyzer for Ubuntu
 
 ```bash
 sudo apt install ncdu
