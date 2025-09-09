@@ -63,7 +63,7 @@ drwxrwxrwx 4 root root 4096 Oct 21  2024 public
 eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$
 ```
 
-## 📂 CasaOS
+## ⚙️ CasaOS
 
 [CasaOS Github page](https://github.com/IceWhaleTech/CasaOS)
 
