@@ -1,9 +1,8 @@
 # n100
 
-# qBittorrent + VueTorrent Setup
+# MiniPC configuration basics
 
-This project documents my setup of **qBittorrent** with the **VueTorrent** web UI.  
-It shows how system files are stored and how to access the VueTorrent directory.
+This project documents my setup of minipc
 
 ---
 
@@ -27,9 +26,8 @@ drwxrwxrwx 3 root root 4096 Oct 27  2024 ..
 -rwxrw-rw- 1 root root 4096 Mar  2  2025 ._version.txt
 drwxrwxrwx 4 root root 4096 Oct 21  2024 public
 -rwxrw-rw- 1 root root    6 Oct 21  2024 version.txt
-eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$ 
-
----
+eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$
+```
 
 ## 📂 Disk automount
 
@@ -56,5 +54,5 @@ eugeneb@n100:/mnt/satamedialibrary$ cat /etc/fstab
 /dev/sda1   /mnt/satamedialibrary   ext4   defaults   0   2
 /dev/sdb1   /mnt/t9medialibrary   ext4   defaults   0   2
 /swap.img	none	swap	sw	0	0
-
+```
 ---
