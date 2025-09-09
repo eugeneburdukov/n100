@@ -74,4 +74,16 @@ or
 ```bash
 curl -fsSL https://get.casaos.io | sudo bash
 ```
+
+## ⚙️ Docker containers to install:
+
+- 🎬 **Jellyfin** – Media server
+- 📊 **Jellystat** – Jellyfin statistics & analytics
+- 📥 **qBittorrent** – Torrent client
+- 📈 **btop** – Resource monitor
+- 📝 **Trilium** – Notes & knowledge base
+- 📊 **Scrutiny** – Disk monitoring
+- 🚀 **OpenSpeedTest** – Lan Network speed testing
+- 🎞️ **mkvtoolnix** – MKV video tools
+
 ---
