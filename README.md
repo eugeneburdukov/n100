@@ -40,29 +40,6 @@ ncdu usage:
 ncdu
 ```
 
-## 📂 Skin Directory Structure for qBittorent/Vuetorrent
-
-My setup is located under:
-
-```bash
-Host: /mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent 
-Container: /systemfiles
-
-Write directory:
-eugeneb@n100:~$ cd /mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent
-eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$ ls -la
-total 36
-drwxrwxrwx 3 root root 4096 Oct 27  2024 .
-drwxrwxrwx 3 root root 4096 Oct 27  2024 ..
--rwxrw-rw- 1 root root 6148 Oct 27  2024 .DS_Store
--rwxrw-rw- 1 root root 4096 Mar  2  2025 ._.DS_Store
--rwxrw-rw- 1 root root 4096 Mar  2  2025 ._public
--rwxrw-rw- 1 root root 4096 Mar  2  2025 ._version.txt
-drwxrwxrwx 4 root root 4096 Oct 21  2024 public
--rwxrw-rw- 1 root root    6 Oct 21  2024 version.txt
-eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$
-```
-
 ## ⚙️ CasaOS
 
 [CasaOS Github page](https://github.com/IceWhaleTech/CasaOS)
@@ -85,5 +62,29 @@ curl -fsSL https://get.casaos.io | sudo bash
 - 📊 **Scrutiny** – Disk monitoring
 - 🚀 **OpenSpeedTest** – Lan Network speed testing
 - 🎞️ **mkvtoolnix** – MKV video tools
+
+
+## 📂 Skin Directory Structure for qBittorent/Vuetorrent
+
+My setup is located under:
+
+```bash
+Host: /mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent 
+Container: /systemfiles
+
+Write directory:
+eugeneb@n100:~$ cd /mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent
+eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$ ls -la
+total 36
+drwxrwxrwx 3 root root 4096 Oct 27  2024 .
+drwxrwxrwx 3 root root 4096 Oct 27  2024 ..
+-rwxrw-rw- 1 root root 6148 Oct 27  2024 .DS_Store
+-rwxrw-rw- 1 root root 4096 Mar  2  2025 ._.DS_Store
+-rwxrw-rw- 1 root root 4096 Mar  2  2025 ._public
+-rwxrw-rw- 1 root root 4096 Mar  2  2025 ._version.txt
+drwxrwxrwx 4 root root 4096 Oct 21  2024 public
+-rwxrw-rw- 1 root root    6 Oct 21  2024 version.txt
+eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$
+```
 
 ---
