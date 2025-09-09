@@ -31,6 +31,15 @@ eugeneb@n100:/mnt/satamedialibrary$ cat /etc/fstab
 /swap.img	none	swap	sw	0	0
 ```
 
+## 📂 Install Disk Usage analyzer for Ubuntu
+
+```bash
+sudo apt install ncdu
+
+ncdu usage:
+ncdu
+```
+
 ## 📂 Skin Directory Structure for qBittorent/Vuetorrent
 
 My setup is located under:
