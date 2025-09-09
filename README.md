@@ -62,4 +62,16 @@ drwxrwxrwx 4 root root 4096 Oct 21  2024 public
 -rwxrw-rw- 1 root root    6 Oct 21  2024 version.txt
 eugeneb@n100:/mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent$
 ```
+
+## 📂 CasaOS
+
+[CasaOS Github page](https://github.com/IceWhaleTech/CasaOS)
+
+```bash
+wget -qO- https://get.casaos.io | sudo bash
+```
+or
+```bash
+curl -fsSL https://get.casaos.io | sudo bash
+```
 ---
