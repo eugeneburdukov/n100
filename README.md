@@ -56,12 +56,12 @@ curl -fsSL https://get.casaos.io | sudo bash
 
 ## ⚙️ Docker Service Stack
 
-- 🎬 **Jellyfin** – Media server | [jellyfin.yml](./Jellyfin1011.yaml) |
-- 📊 **Jellystat** – Jellyfin statistics & analytics
-- 📥 **qBittorrent** – Torrent client
+- 🎬 **Jellyfin** – Media server | [Jellyfin1011.yaml](./Jellyfin1011.yaml) |
+- 📊 **Jellystat** – Jellyfin statistics & analytics | [Jellystat.yaml](./Jellystat.yaml) |
+- 📥 **qBittorrent** – Torrent client | [qBittorrent.yaml](./qBittorrent.yaml) |
 - 📈 **btop** – Resource monitor
-- 📝 **Trilium** – Notes & knowledge base
-- 📊 **Scrutiny** – Disk monitoring
+- 📝 **Trilium** – Notes & knowledge base | [Trilium.yaml](./Trilium.yaml) |
+- 📊 **Scrutiny** – Disk monitoring | [Scrutiny.yaml](./Scrutiny.yaml) |
 - 🚀 **OpenSpeedTest** – Lan Network speed testing
 - 🎞️ **mkvtoolnix** – MKV video tools
 
