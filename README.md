@@ -12,7 +12,7 @@ sudo mkdir -p /mnt/t9medialibrary
 
 Edit the /etc/fstab following the syntax:
 
-eugeneb@n100:/mnt/satamedialibrary$ cat /etc/fstab 
+eugeneb@n100:~$ cat /etc/fstab 
 # /etc/fstab: static file system information.
 #
 # Use 'blkid' to print the universally unique identifier for a
@@ -23,12 +23,14 @@ eugeneb@n100:/mnt/satamedialibrary$ cat /etc/fstab
 # / was on /dev/nvme0n1p1 during curtin installation
 /dev/disk/by-uuid/609272d2-a84f-49cc-a260-cdd89be2ce2c / ext4 defaults 0 1
 # /home was on /dev/nvme0n1p3 during curtin installation
+/dev/sdc2  /mnt/ssd2tb   ntfs-3g  defaults,uid=1000,gid=1000,umask=022  0  0
 /dev/disk/by-uuid/3257aa9d-edc3-4693-9657-4228a76b2a09 /home ext4 defaults 0 1
 # /boot/efi was on /dev/nvme0n1p2 during curtin installation
 /dev/disk/by-uuid/B5E3-E5F4 /boot/efi vfat defaults 0 1
 /dev/sda1   /mnt/satamedialibrary   ext4   defaults   0   2
 /dev/sdb1   /mnt/t9medialibrary   ext4   defaults   0   2
 /swap.img	none	swap	sw	0	0
+
 ```
 
 ## 🔧 Install Disk Usage analyzer for Ubuntu
