@@ -1,4 +1,4 @@
-# 📟 Home Server Setup
+# 📦 Home Server Setup
 
 A collection of configuration basics and essential services for a streamlined home server experience.
 
