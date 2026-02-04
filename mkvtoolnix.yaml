@@ -1,0 +1,53 @@
+name: yourprojectname
+services:
+  mkvtoolnix:
+    cpu_shares: 90
+    command: []
+    container_name: mkvtoolnix
+    deploy:
+      resources:
+        limits:
+          memory: 15257M
+    hostname: mkvtoolnix
+    image: jlesage/mkvtoolnix:latest
+    labels:
+      icon: https://icon.casaos.io/main/all/mkvtoolnix.png
+    ports:
+      - target: 5800
+        published: "5801"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/mkvtoolnix/config
+        target: /config
+      - type: bind
+        source: /home/user
+        target: /storage
+      - type: bind
+        source: /mnt/t9medialibrary/t9library/t9Downloads
+        target: /t9Downloads
+      - type: bind
+        source: /home/eugeneb/Documents/m2library/m2Downloads
+        target: /m2Downloads
+      - type: bind
+        source: /home/eugeneb/Documents/m2library/m2medialibrary/Movies
+        target: /m2medialibraryMovies
+    devices: []
+    cap_add: []
+    environment: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://icon.casaos.io/main/all/mkvtoolnix.png
+  index: /
+  is_uncontrolled: false
+  port_map: "5801"
+  scheme: http
+  store_app_id: yourprojectname
+  title:
+    custom: ""
+    en_us: mkvtoolnix
