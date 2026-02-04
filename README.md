@@ -1,10 +1,10 @@
-# 📦 MiniPC configuration basics
+# 📦 Home Server Setup
 
-This project documents basic setup
+A collection of configuration basics and essential services for a streamlined home server experience.
 
 ---
 
-## 📂 Disk automount - startup
+## 📂 Disk Management
 
 ```bash
 Create a folder:
@@ -33,7 +33,7 @@ eugeneb@n100:~$ cat /etc/fstab
 
 ```
 
-## 🔧 Install Disk Usage analyzer for Ubuntu
+## 🔧 System Utilities
 
 ```bash
 sudo apt install ncdu
@@ -54,7 +54,7 @@ or
 curl -fsSL https://get.casaos.io | sudo bash
 ```
 
-## ⚙️ Docker containers to install:
+## ⚙️ Docker Service Stack
 
 - 🎬 **Jellyfin** – Media server
 - 📊 **Jellystat** – Jellyfin statistics & analytics
@@ -68,7 +68,7 @@ curl -fsSL https://get.casaos.io | sudo bash
 
 ## 📂 Skin Directory Structure for qBittorent/Vuetorrent
 
-My setup is located under:
+Path Mapping:
 
 ```bash
 Host: /mnt/home/eugeneb/AppData/qbittorrentSystemfiles/vuetorrent 
