@@ -56,7 +56,7 @@ curl -fsSL https://get.casaos.io | sudo bash
 
 ## ⚙️ Docker Service Stack
 
-- 🎬 **Jellyfin** – Media server [jellyfin.yml](./jellyfin.yml)
+- 🎬 **Jellyfin** – Media server [jellyfin.yml](.Jellyfin1011.yaml)
 - 📊 **Jellystat** – Jellyfin statistics & analytics
 - 📥 **qBittorrent** – Torrent client
 - 📈 **btop** – Resource monitor
