@@ -63,7 +63,7 @@ curl -fsSL https://get.casaos.io | sudo bash
 - 📝 **Trilium** – Notes & knowledge base | [Trilium.yaml](./Trilium.yaml) |
 - 📊 **Scrutiny** – Disk monitoring | [Scrutiny.yaml](./Scrutiny.yaml) |
 - 🚀 **OpenSpeedTest** – Lan Network speed testing
-- 🎞️ **mkvtoolnix** – MKV video tools
+- 🎞️ **mkvtoolnix** – MKV video tools | [mkvtoolnix.yaml](./mkvtoolnix.yaml) |
 
 
 ## 📂 Skin Directory Structure for qBittorent/Vuetorrent
