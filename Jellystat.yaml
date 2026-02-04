@@ -1,0 +1,94 @@
+name: big-bear-jellystat
+services:
+  big-bear-jellystat:
+    cpu_shares: 90
+    container_name: big-bear-jellystat
+    deploy:
+      resources:
+        limits:
+          memory: 15257M
+    environment:
+      - JWT_SECRET=my-secret-jwt-key
+      - POSTGRES_IP=big-bear-jellystat-db
+      - POSTGRES_PASSWORD=8a23ad09-61cf-4178-a783-6d4586496e3a
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+    hostname: big-bear-jellystat
+    image: cyfershepard/jellystat:1.1.6
+    labels:
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellystat.png
+    ports:
+      - mode: ingress
+        target: 3000
+        published: "3000"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /home/eugeneb/homeAppData/AppData/big-bear-jellystat/backup-data
+        target: /app/backend/backup-data
+        bind:
+          create_host_path: true
+    devices: []
+    cap_add: []
+    command: []
+    networks:
+      - big-bear-jellystat-network
+    privileged: false
+  big-bear-jellystat-db:
+    cpu_shares: 90
+    container_name: big-bear-jellystat-db
+    deploy:
+      resources:
+        limits:
+          memory: 15257M
+    environment:
+      - POSTGRES_DB=jfstat
+      - POSTGRES_PASSWORD=8a23ad09-61cf-4178-a783-6d4586496e3a
+      - POSTGRES_USER=postgres
+    hostname: big-bear-jellystat-db
+    image: postgres:15.2
+    labels:
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellystat.png
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/big-bear-jellystat/postgres-data
+        target: /var/lib/postgresql/data
+        bind:
+          create_host_path: true
+    ports: []
+    devices: []
+    cap_add: []
+    command: []
+    networks:
+      - big-bear-jellystat-network
+    privileged: false
+networks:
+  big-bear-jellystat-network:
+    name: big-bear-jellystat-network
+    driver: bridge
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  author: BigBearTechWorld
+  category: BigBearCasaOS
+  description:
+    en_us: Jellystat is a free and open source Statistics App for Jellyfin! (This
+      project is still in development - expect some weirdness)
+  developer: cyfershepard
+  hostname: ""
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellystat.png
+  index: /
+  is_uncontrolled: false
+  main: big-bear-jellystat
+  port_map: "3000"
+  scheme: http
+  store_app_id: big-bear-jellystat
+  tagline:
+    en_us: Jellystat
+  thumbnail: ""
+  title:
+    custom: ""
+    en_us: Jellystat
