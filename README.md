@@ -64,6 +64,7 @@ curl -fsSL https://get.casaos.io | sudo bash
 - 📊 **Scrutiny** – Disk monitoring | [Scrutiny.yaml](./Scrutiny.yaml) |
 - 🚀 **OpenSpeedTest** – Lan Network speed testing
 - 🎞️ **mkvtoolnix** – MKV video tools | [mkvtoolnix.yaml](./mkvtoolnix.yaml) |
+- 📚 **Calibre-web** – Book organizer | [Calibre-web.yaml](./Calibre-web.yaml) |
 
 
 ## 📂 Skin Directory Structure for qBittorent/Vuetorrent
