@@ -2,6 +2,45 @@
 
 A collection of configuration basics and essential services for a streamlined home server experience.
 
+# CasaOS Service Architecture
+
+```mermaid
+flowchart TD
+    %% Main Anchor
+    CasaOS((CasaOS))
+
+    %% Integrated Media & Data Flow
+    subgraph Media [Media & Content Management]
+        direction TB
+        QB[qBittorrent] -->|Downloads| JF[Jellyfin]
+        JF --- JS[Jellystat]
+        JF --- MKV[mkvtoolnix]
+        JF --- CW[Calibre-web]
+    end
+
+    %% System Tools
+    subgraph System [System Monitoring & Tools]
+        direction LR
+        BT[btop]
+        SC[Scrutiny]
+        OST[OpenSpeedTest]
+    end
+
+    %% Productivity
+    subgraph Knowledge [Knowledge Base]
+        TR[Trilium]
+    end
+
+    %% Core Links
+    CasaOS --> Media
+    CasaOS --> System
+    CasaOS --> Knowledge
+
+    %% Styling for Clarity
+    style CasaOS fill:#333,color:#fff
+    style Media fill:#e1f5fe,stroke:#01579b
+    style System fill:#f1f8e9,stroke:#33691e
+
 ---
 
 ## 📂 Disk Management
