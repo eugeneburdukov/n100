@@ -2,23 +2,29 @@
 
 A collection of configuration basics and essential services for a streamlined home server experience.
 
-# CasaOS Service Architecture
+### 🖥️ CasaOS System Architecture
 
 ```mermaid
-flowchart TD
-    %% Main Anchor
-    CasaOS((CasaOS))
+graph TD
+    %% Main Entry
+    CasaOS((<b>CasaOS</b>))
 
-    %% Integrated Media & Data Flow
+    %% Media & Content Cluster
     subgraph Media [Media & Content Management]
         direction TB
-        QB[qBittorrent] -->|Downloads| JF[Jellyfin]
-        JF --- JS[Jellystat]
-        JF --- MKV[mkvtoolnix]
-        JF --- CW[Calibre-web]
+        QB{{qBittorrent}}
+        JF[Jellyfin]
+        JS[(Jellystat)]
+        MKV[mkvtoolnix]
+        CW[Calibre-web]
+
+        QB ==>|Downloads| JF
+        JF --- JS
+        JF --- MKV
+        JF --- CW
     end
 
-    %% System Tools
+    %% System & Network Cluster
     subgraph System [System Monitoring & Tools]
         direction LR
         BT[btop]
@@ -26,20 +32,36 @@ flowchart TD
         OST[OpenSpeedTest]
     end
 
-    %% Productivity
+    %% Knowledge Cluster
     subgraph Knowledge [Knowledge Base]
         TR[Trilium]
     end
 
-    %% Core Links
-    CasaOS --> Media
+    %% Core Connections
+    CasaOS ==> Media
     CasaOS --> System
     CasaOS --> Knowledge
 
-    %% Styling for Clarity
-    style CasaOS fill:#333,color:#fff
-    style Media fill:#e1f5fe,stroke:#01579b
-    style System fill:#f1f8e9,stroke:#33691e
+    %% ==========================================
+    %% 🎨 Stable CSS Styling
+    %% ==========================================
+
+    %% Node Classes
+    classDef mainNode fill:#222,stroke:#000,stroke-width:2px,color:#fff
+    classDef contentNode fill:#e1f5fe,stroke:#0277bd,stroke-width:1px,color:#01579b
+    classDef systemNode fill:#f1f8e9,stroke:#558b2f,stroke-width:1px,color:#33691e
+    classDef knowledgeNode fill:#fff3e0,stroke:#ef6c00,stroke-width:1px,color:#e65100
+
+    %% Assign classes
+    class CasaOS mainNode
+    class JF,JS,MKV,CW,QB contentNode
+    class BT,SC,OST systemNode
+    class TR knowledgeNode
+
+    %% Subgraph Styles
+    style Media fill:#fbfdff,stroke:#01579b,stroke-dasharray: 5 5
+    style System fill:#fafdfb,stroke:#558b2f,stroke-dasharray: 5 5
+    style Knowledge fill:#fffcf9,stroke:#ef6c00,stroke-dasharray: 5 5
 
 ```
 
