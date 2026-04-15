@@ -49,7 +49,7 @@ Software Quality Assurance Engineer with 13+ years of experience across the full
 - **SQL & Database Validation:** Developed and optimised complex SQL scripts to validate data migrations and verify back-end integrity for enterprise-scale applications.
 - **Leadership & Process Improvement:** Mentored junior QA engineers; refined defect management workflows in Jira to improve resolution speed and align QA activities with development sprints.
 - **Release Stability:** Managed structured regression cycles across patches and releases; provided clear, data-driven status updates to stakeholders.
-##### Notable Project: Confidential Banking & Fintech Client (NDA) — *2020 – Present*
+##### Notable Project: Banking & Fintech Client (NDA) — *2020 – Present*
 
 QA Engineer embedded within a regulated financial services organisation, working across compliance-critical systems including AML (Anti-Money Laundering), KYC (Know Your Customer), and fraud management platforms. Collaborated with the Financial Crime Investigation Unit (FCIU) to ensure software quality and regulatory alignment.
 
