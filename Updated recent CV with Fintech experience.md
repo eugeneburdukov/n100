@@ -12,17 +12,17 @@ Software Quality Assurance Engineer with 13+ years of experience across the full
 
 ## Technical Skills
 
-**Testing Types:** Functional testing, regression testing, manual testing, end-to-end testing, smoke testing, API testing, database testing
-**Test Automation:** Playwright, TypeScript, Selenium, Java
-**API Testing:** REST API, SOAP, web services testing
-**Database & SQL:** MySQL, SQL query writing and data validation
-**CI/CD & DevOps:** Jenkins, GitHub Actions, Gitea Actions, Docker, Azure DevOps, Linux
-**Test Management:** Xray, Jira, Confluence, Notion
-**Defect Management:** Jira, bug reporting, root cause analysis
-**Mobile Testing:** BrowserStack, iOS, Android
-**Compliance & Domain:** AML, KYC, SAP, Alessa, CRM platforms
-**Test Artifacts:** Test plans, test cases, test scripts, test data, defect reports
-**Methodologies:** Agile, SDLC, STLC
+- **Testing Types:** Functional testing, regression testing, manual testing, end-to-end testing, smoke testing, API testing, database testing
+- **Test Automation:** Playwright, TypeScript, Selenium, Java
+- **API Testing:** REST API, SOAP, web services testing
+- **Database & SQL:** MySQL, SQL query writing and data validation
+- **CI/CD & DevOps:** Jenkins, GitHub Actions, Gitea Actions, Docker, Azure DevOps, Linux
+- **Test Management:** Xray, Jira, Confluence, Notion
+- **Defect Management:** Jira, bug reporting, root cause analysis
+- **Mobile Testing:** BrowserStack, iOS, Android
+- **Compliance & Domain:** AML, KYC, SAP, Alessa, CRM platforms
+- **Test Artifacts:** Test plans, test cases, test scripts, test data, defect reports
+- **Methodologies:** Agile, SDLC, STLC
 
 ---
 
