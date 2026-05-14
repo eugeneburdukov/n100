@@ -67,3 +67,35 @@ graph TD
 
 ---
 
+## 📦 Docker Compose Service Overview
+
+This repository contains configurations for the following services, categorized by their primary function within the homelab.
+
+### 🎬 Media & Entertainment
+*   **Jellyfin1011.yaml**: The primary media server for streaming movies and TV shows.
+*   **Jellystat.yaml**: Statistics and usage tracking for the Jellyfin server.
+*   **Torrserver.yaml**: Streaming torrents directly to media players.
+*   **Calibre-web.yaml**: Web interface for browsing and reading your e-book library.
+
+### ⚡ Media Processing & Automation
+*   **Tdarr.yaml**: Distributed hardware transcoding (H.265/HEVC) for library optimization.
+*   **Radarr.yaml**: Movie collection manager and automation.
+*   **Sonarr.yaml**: TV show collection manager and automation.
+*   **Prowlarr.yaml**: Indexer manager for the "Servarr" stack.
+*   **qBittorrent.yaml**: Linux-native BitTorrent client for downloads.
+
+### 🛠️ Video & File Utilities
+*   **MakeMKV.yaml**: Tool for ripping physical media to MKV files.
+*   **MKVToolNix.yaml**: Suite for editing and inspecting MKV files.
+*   **MKV-Batch-GUI.yaml**: Batch processing interface for MKV modifications.
+*   **Medialyze.yaml**: Analysis tool for media library metrics and health.
+
+### 📊 System Administration & Performance
+*   **Portainer.yaml**: GUI for managing all running Docker containers.
+*   **Btop.yaml**: High-performance system monitor (Terminal-based).
+*   **Scrutiny.yaml**: S.M.A.R.T. monitoring for hard drive health.
+*   **OpenSpeedTest.yaml**: Network speed testing tool hosted locally.
+
+### 📝 Knowledge & Productivity
+*   **Trilium.yaml**: Hierarchical personal knowledge base and note-taking.
+*   **Mermaid-live-editor.yaml**: Visual editor for creating diagrams and charts using code.
