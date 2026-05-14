@@ -1,0 +1,47 @@
+name: sonarr_service
+services:
+  sonarr:
+    cpu_shares: 90
+    command: []
+    container_name: sonarr
+    deploy:
+      resources:
+        limits:
+          memory: 4096M
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ=Europe/Kyiv
+    hostname: sonarr
+    image: lscr.io/linuxserver/sonarr:latest
+    labels:
+      icon: https://icon.casaos.io/main/all/sonarr.png
+    ports:
+      - target: 8989
+        published: "8989"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /home/eugeneb/homeAppData/AppData/sonarr/config
+        target: /config
+      - type: bind
+        source: /mnt/ssd2tb/ssd2tbmedialibrary/
+        target: /ssd2tbmedialibrary
+    devices: []
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://icon.casaos.io/main/all/sonarr.png
+  index: /
+  is_uncontrolled: false
+  port_map: "8989"
+  scheme: http
+  store_app_id: sonarr_service
+  title:
+    custom: ""
+    en_us: sonarr

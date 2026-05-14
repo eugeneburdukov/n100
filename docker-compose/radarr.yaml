@@ -1,0 +1,47 @@
+name: energetic_muneo
+services:
+  radarr:
+    cpu_shares: 90
+    command: []
+    container_name: radarr
+    deploy:
+      resources:
+        limits:
+          memory: 15258M
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ=Europe/Kyiv
+    hostname: radarr
+    image: lscr.io/linuxserver/radarr:latest
+    labels:
+      icon: https://icon.casaos.io/main/all/radarr.png
+    ports:
+      - target: 7878
+        published: "7878"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /home/eugeneb/homeAppData/AppData/radarr/config
+        target: /config
+      - type: bind
+        source: /mnt/ssd2tb/ssd2tbmedialibrary/
+        target: /ssd2tbmedialibrary
+    devices: []
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://icon.casaos.io/main/all/radarr.png
+  index: /
+  is_uncontrolled: false
+  port_map: "7878"
+  scheme: http
+  store_app_id: energetic_muneo
+  title:
+    custom: ""
+    en_us: radarr

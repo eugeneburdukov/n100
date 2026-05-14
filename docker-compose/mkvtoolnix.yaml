@@ -31,8 +31,14 @@ services:
         source: /home/eugeneb/Documents/m2library/m2Downloads
         target: /m2Downloads
       - type: bind
-        source: /home/eugeneb/Documents/m2library/m2medialibrary/Movies
-        target: /m2medialibraryMovies
+        source: /home/eugeneb/Documents/m2library/m2medialibrary/
+        target: /m2medialibrary
+      - type: bind
+        source: /mnt/t9medialibrary/t9library/t9medialibrary/
+        target: /t9medialibrary
+      - type: bind
+        source: /mnt/ssd2tb/ssd2tbmedialibrary/ssd2tbdownloads
+        target: /ssd2tbdownloads
     devices: []
     cap_add: []
     environment: []

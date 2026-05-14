@@ -40,6 +40,12 @@ services:
       - type: bind
         source: /mnt/t9medialibrary/t9library/t9Downloads
         target: /t9Downloads
+      - type: bind
+        source: /mnt/ssd2tb/ssd2tbmedialibrary/ssd2tbdownloads
+        target: /ssd2tbDownloads
+      - type: bind
+        source: /mnt/t5medialibrary/t5library/t5Downloads
+        target: /t5Downloads
     devices: []
     cap_add: []
     network_mode: bridge

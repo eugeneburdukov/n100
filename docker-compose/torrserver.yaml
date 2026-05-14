@@ -1,0 +1,48 @@
+name: gifted_kenichi
+services:
+  torrserver:
+    cpu_shares: 90
+    command: []
+    container_name: torrserver
+    deploy:
+      resources:
+        limits:
+          memory: 15258M
+    environment:
+      - TS_HTTPAUTH=0
+      - TZ=Europe/Kyiv
+    hostname: torrserver
+    image: ghcr.io/yourok/torrserver:latest
+    labels:
+      icon: https://icon.casaos.io/main/all/torrserver.png
+    logging:
+      driver: json-file
+      options:
+        max-file: "3"
+        max-size: 10m
+    ports:
+      - target: 8090
+        published: "8095"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /home/eugeneb/homeAppData/AppData/torrserver
+        target: /opt/ts
+    devices: []
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://icon.casaos.io/main/all/torrserver.png
+  index: /
+  is_uncontrolled: false
+  port_map: "8095"
+  scheme: http
+  store_app_id: gifted_kenichi
+  title:
+    custom: ""
+    en_us: torrserver

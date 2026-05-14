@@ -2,6 +2,7 @@ name: big-bear-jellystat
 services:
   big-bear-jellystat:
     cpu_shares: 90
+    command: []
     container_name: big-bear-jellystat
     deploy:
       resources:
@@ -14,7 +15,7 @@ services:
       - POSTGRES_PORT=5432
       - POSTGRES_USER=postgres
     hostname: big-bear-jellystat
-    image: cyfershepard/jellystat:1.1.6
+    image: cyfershepard/jellystat:latest
     labels:
       icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellystat.png
     ports:
@@ -31,12 +32,12 @@ services:
           create_host_path: true
     devices: []
     cap_add: []
-    command: []
     networks:
       - big-bear-jellystat-network
     privileged: false
   big-bear-jellystat-db:
     cpu_shares: 90
+    command: []
     container_name: big-bear-jellystat-db
     deploy:
       resources:
@@ -60,7 +61,6 @@ services:
     ports: []
     devices: []
     cap_add: []
-    command: []
     networks:
       - big-bear-jellystat-network
     privileged: false

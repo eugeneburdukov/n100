@@ -1,0 +1,95 @@
+name: tdarr
+services:
+  tdarr:
+    cpu_shares: 10
+    command: []
+    container_name: tdarr
+    deploy:
+      resources:
+        limits:
+          memory: 8192M
+        reservations:
+          memory: "536870912"
+    devices:
+      - /dev/dri:/dev/dri
+      - /dev/vcsm:/dev/vcsm
+      - /dev/vchiq:/dev/vchiq
+      - /dev/video10:/dev/video10
+      - /dev/video11:/dev/video11
+      - /dev/video12:/dev/video12
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ=Europe/Kyiv
+      - internalNode=true
+      - nodeID=CasaOS-Main
+      - serverIP=0.0.0.0
+      - serverPort=8266
+      - webUIPort=8265
+    hostname: tdarr
+    image: haveagitgat/tdarr:latest
+    labels:
+      icon: https://raw.githubusercontent.com/haveagitgat/Tdarr/master/assets/logo.png
+    ports:
+      - target: 8265
+        published: "8265"
+        protocol: tcp
+      - target: 8266
+        published: "8266"
+        protocol: tcp
+    privileged: true
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /home/eugeneb/homeAppData/AppData/tdarr/server
+        target: /app/server
+      - type: bind
+        source: /home/eugeneb/homeAppData/AppData/tdarr/configs
+        target: /app/configs
+      - type: bind
+        source: /mnt/satamedialibrary/satamedialibrary/tdarr/tdarrTranscode
+        target: /temp
+      - type: bind
+        source: /DATA/Media
+        target: /Media
+      - type: bind
+        source: /mnt/satamedialibrary/satamedialibrary
+        target: /satamedialibrary
+      - type: bind
+        source: /mnt/t9medialibrary/t9library/t9medialibrary
+        target: /t9medialibrary
+      - type: bind
+        source: /home/eugeneb/Documents/m2library/m2medialibrary
+        target: /m2medialibrary
+      - type: bind
+        source: /mnt/ssd2tb/ssd2tbmedialibrary
+        target: /ssd2tbmedialibrary
+    cap_add: []
+    network_mode: bridge
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  author: Eugene B
+  category: Video tools
+  description:
+    en_us: >
+      Tdarr is a distributed transcoding system for automating your media
+      library transcode management and making sure your files are exactly the
+      format you want them to be (HEVC/H265, etc.).  It features a smart plugin
+      system to clean up metadata, remove unneeded languages, and optimize
+      bitrates.
+  developer: HaveAGitGat
+  hostname: ""
+  icon: https://raw.githubusercontent.com/haveagitgat/Tdarr/master/assets/logo.png
+  index: /
+  is_uncontrolled: false
+  main: tdarr
+  port_map: "8265"
+  scheme: http
+  store_app_id: tdarr
+  tagline:
+    en_us: Automated Media Transcoding & Library Management
+  title:
+    custom: Tdarr
+    en_us: Tdarr

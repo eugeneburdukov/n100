@@ -1,0 +1,60 @@
+name: sublime_richard
+services:
+  mkv-batch-gui:
+    cpu_shares: 50
+    command: []
+    container_name: mkv-batch-gui
+    deploy:
+      resources:
+        limits:
+          memory: 15258M
+    environment:
+      - GROUP_ID=1000
+      - KEEP_APP_RUNNING=1
+      - TZ=Europe/Kyiv
+      - USER_ID=1000
+    hostname: mkv-batch-gui
+    image: jlesage/mkv-muxing-batch-gui:latest
+    labels:
+      icon: https://icon.casaos.io/main/all/mkv-batch-gui.png
+    ports:
+      - target: 5800
+        published: "5834"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /home/eugeneb/homeAppData/AppData/mkv-batch-gui
+        target: /config
+      - type: bind
+        source: /DATA/Media
+        target: /storage/Media
+      - type: bind
+        source: /mnt/satamedialibrary/satamedialibrary
+        target: /storage/satamedialibrary
+      - type: bind
+        source: /mnt/t9medialibrary/t9library/t9medialibrary
+        target: /storage/t9medialibrary
+      - type: bind
+        source: /home/eugeneb/Documents/m2library/m2medialibrary
+        target: /storage/m2medialibrary
+      - type: bind
+        source: /mnt/ssd2tb/ssd2tbmedialibrary
+        target: /storage/ssd2tbmedialibrary
+    devices: []
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://icon.casaos.io/main/all/mkv-batch-gui.png
+  index: /
+  is_uncontrolled: false
+  port_map: "5834"
+  scheme: http
+  store_app_id: sublime_richard
+  title:
+    custom: ""
+    en_us: mkv-batch-gui

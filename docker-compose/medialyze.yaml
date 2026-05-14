@@ -1,0 +1,57 @@
+name: medialyze
+services:
+  medialyze:
+    cpu_shares: 90
+    command: []
+    container_name: medialyze
+    deploy:
+      resources:
+        limits:
+          memory: 15258M
+    environment:
+      - APP_PORT=8080
+      - CONFIG_PATH=/config
+      - MEDIA_ROOT=/media
+      - TZ=UTC
+    hostname: medialyze
+    image: ghcr.io/frederikemmer/medialyze:latest
+    labels:
+      icon: https://icon.casaos.io/main/all/medialyze.png
+    ports:
+      - target: 8080
+        published: "8090"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /home/eugeneb/homeAppData/AppData/medialize
+        target: /config
+      - type: bind
+        source: /mnt/satamedialibrary/satamedialibrary
+        target: /media/sata
+      - type: bind
+        source: /mnt/t9medialibrary/t9library/t9medialibrary
+        target: /media/t9
+      - type: bind
+        source: /home/eugeneb/Documents/m2library/m2medialibrary
+        target: /media/m2
+      - type: bind
+        source: /mnt/ssd2tb/ssd2tbmedialibrary
+        target: /media/ssd2tb
+    devices: []
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://icon.casaos.io/main/all/medialyze.png
+  index: /
+  is_uncontrolled: false
+  port_map: "8090"
+  scheme: http
+  store_app_id: medialyze
+  title:
+    custom: ""
+    en_us: medialyze

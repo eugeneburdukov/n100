@@ -1,7 +1,7 @@
 name: jellyfin
 services:
   jellyfin:
-    cpu_shares: 90
+    cpu_shares: 10
     command: []
     container_name: jellyfin1011
     deploy:
@@ -20,7 +20,7 @@ services:
     environment:
       - PGID=1000
       - PUID=1000
-      - TZ=Etc/UTC
+      - TZ=Europe/Kyiv
     hostname: jellyfin1011
     image: linuxserver/jellyfin:10.11.0
     labels:
@@ -58,6 +58,9 @@ services:
       - type: bind
         source: /home/eugeneb/Documents/m2library/m2medialibrary
         target: /m2medialibrary
+      - type: bind
+        source: /mnt/ssd2tb/ssd2tbmedialibrary
+        target: /ssd2tbmedialibrary
     cap_add: []
     network_mode: bridge
     privileged: false

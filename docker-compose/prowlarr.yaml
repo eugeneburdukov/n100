@@ -1,0 +1,44 @@
+name: bold_thiago
+services:
+  prowlarr:
+    cpu_shares: 90
+    command: []
+    container_name: prowlarr
+    deploy:
+      resources:
+        limits:
+          memory: 15258M
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ=Europe/Kyiv
+    hostname: prowlarr
+    image: lscr.io/linuxserver/prowlarr:latest
+    labels:
+      icon: https://icon.casaos.io/main/all/prowlarr.png
+    ports:
+      - target: 9696
+        published: "9696"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /home/eugeneb/homeAppData/AppData/prowlarr/config
+        target: /config
+    devices: []
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://icon.casaos.io/main/all/prowlarr.png
+  index: /
+  is_uncontrolled: false
+  port_map: "9696"
+  scheme: http
+  store_app_id: bold_thiago
+  title:
+    custom: ""
+    en_us: prowlarr
